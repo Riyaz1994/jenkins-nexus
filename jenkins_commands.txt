@@ -1,0 +1,110 @@
+    1  cd /etc/ssh/
+    2  vi sshd_config
+    3  systemctl daemon-reload
+    4  service sshd restart
+    5  cd
+    6  passwd
+    7  vi java.sh
+    8  vi jenkins.sh
+    9  vi nexus
+   10  ls
+   11  ./java.sh
+   12  ls -l
+   13  mkdir scripts
+   14  ls
+   15  mv {java.sh,jenkins.sh,nexus} scripts
+   16  ls
+   17  cd scripts
+   18  ls
+   19  mv nexus nexus.sh
+   20  ls
+   21  cd ..
+   22  chmod -R 755 scripts
+   23  ls -l
+   24  cd scripts
+   25  ls -l
+   26  ./java.sh
+   27  ls
+   28  ./jenkins.sh
+   29  vi jenkins.sh
+   30  ./jenkins.sh
+   31  ssh root@35.233.150.14
+   32  ls
+   33  scp nexus.sh root@35.233.150.14:/scripts/
+   34  scp java.sh root@35.233.150.14:/scripts/
+   35  cd
+   36  apt update -y
+   37  apt install maven
+   38  mvn --version
+   39  echo $JAVA_HOME
+   40  systemctl status jenkins
+   41  cd scripts
+   42  ls
+   43  vi java.sh
+   44  mvn --version
+   45  java -version
+   46  update-java-alternatives -l
+   47  vi java.sh
+   48  vi path.sh
+   49  ls
+   50  ls -l
+   51  chmod 755 path.sh
+   52  ls
+   53  ./path.sh
+   54  echo $JAVA_HOME
+   55  vi path.sh
+   56  cd /etc
+   57  ls
+   58  cat environment
+   59  $JAVA_HOME/bin/java --version
+   60  cd $JAVA_HOME
+   61  ls
+   62  cd /etc
+   63  ls -l environment
+   64  vi environment
+   65  cd
+   66  pwd
+   67  cd scripts
+   68  ls
+   69  vi path.sh
+   70  ./path.sh
+   71  echo $JAVA_HOME
+   72  $JAVA_HOME/bin/java --version
+   73  cd
+   74  cd /usr/lib/jvm/
+   75  ls
+   76  export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+   77  export PATH=$JAVA_HOME/bin:$PATH
+   78  echo $JAVA_HOME
+   79  $JAVA_HOME/bin/java --version
+   80  ls
+   81  cd java-8-openjdk-amd64
+   82  ls
+   83  cd bin
+   84  ls
+   85  java -version
+   86  $JAVA_HOME/bin/java -version
+   87  mvn --version
+   88  clear
+   89  echo $PATH
+   90  cat /etc/environment
+   91  cd /root/
+   92  cd scripts
+   93  vi path.sh
+   94  clear
+   95  ls
+   96  echo $JAVA_HOME
+   97  cat /etc/environment
+   98  history
+   99  systemctl status jenkins
+  100  apt install -y git-core
+  101  git --version
+  102  git init
+  103  ls
+  104  git add .
+  105  git status
+  106  git commit -m " Scripts Jenkins-Nexus"
+  107  git remote add origin https://github.com/Riyaz1994/jenkins-nexus.git
+  108  git push -u origin master
+  109  history
+  110  history >> jenkins_commands.txt
