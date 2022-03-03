@@ -1,0 +1,217 @@
+    1  cd /
+    2  ls
+    3  apt update -y
+    4  cd scripts
+    5  ls
+    6  cd
+    7  cd scripts
+    8  ls
+    9  vi nexus.sh
+   10  cd /etc/ssh/
+   11  vi sshd_config
+   12  systemctl daemon-reload
+   13  service sshd restart
+   14  cd
+   15  passwd
+   16  vi java.sh
+   17  vi jenkins.sh
+   18  vi nexus
+   19  ls
+   20  ./java.sh
+   21  ls -l
+   22  mkdir scripts
+   23  ls
+   24  mv {java.sh,jenkins.sh,nexus} scripts
+   25  ls
+   26  cd scripts
+   27  ls
+   28  mv nexus nexus.sh
+   29  ls
+   30  cd ..
+   31  chmod -R 755 scripts
+   32  ls -l
+   33  cd scripts
+   34  ls -l
+   35  ./java.sh
+   36  ls
+   37  ./jenkins.sh
+   38  vi jenkins.sh
+   39  ./jenkins.sh
+   40  ssh root@35.233.150.14
+   41  ls
+   42  scp nexus.sh root@35.233.150.14:/scripts/
+   43  scp java.sh root@35.233.150.14:/scripts/
+   44  cd
+   45  apt update -y
+   46  apt install maven
+   47  mvn --version
+   48  echo $JAVA_HOME
+   49  systemctl status jenkins
+   50  cd scripts
+   51  ls
+   52  vi java.sh
+   53  mvn --version
+   54  java -version
+   55  update-java-alternatives -l
+   56  vi java.sh
+   57  vi path.sh
+   58  ls
+   59  ls -l
+   60  chmod 755 path.sh
+   61  ls
+   62  ./path.sh
+   63  echo $JAVA_HOME
+   64  vi path.sh
+   65  cd /etc
+   66  ls
+   67  cat environment
+   68  $JAVA_HOME/bin/java --version
+   69  cd $JAVA_HOME
+   70  ls
+   71  cd /etc
+   72  ls -l environment
+   73  vi environment
+   74  cd
+   75  pwd
+   76  cd scripts
+   77  ls
+   78  vi path.sh
+   79  ./path.sh
+   80  echo $JAVA_HOME
+   81  $JAVA_HOME/bin/java --version
+   82  cd
+   83  cd /usr/lib/jvm/
+   84  ls
+   85  export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+   86  export PATH=$JAVA_HOME/bin:$PATH
+   87  echo $JAVA_HOME
+   88  $JAVA_HOME/bin/java --version
+   89  ls
+   90  cd java-8-openjdk-amd64
+   91  ls
+   92  cd bin
+   93  ls
+   94  java -version
+   95  $JAVA_HOME/bin/java -version
+   96  mvn --version
+   97  clear
+   98  echo $PATH
+   99  cat /etc/environment
+  100  cd /root/
+  101  cd scripts
+  102  vi path.sh
+  103  clear
+  104  ls
+  105  echo $JAVA_HOME
+  106  cat /etc/environment
+  107  history
+  108  systemctl status jenkins
+  109  apt install -y git-core
+  110  git --version
+  111  git init
+  112  ls
+  113  git add .
+  114  git status
+  115  git commit -m " Scripts Jenkins-Nexus"
+  116  git remote add origin https://github.com/Riyaz1994/jenkins-nexus.git
+  117  git push -u origin master
+  118  history
+  119  history >> jenkins_commands.txt
+  120  ls
+  121  git pull https://github.com/Riyaz1994/jenkins-nexus.git
+  122  git add .
+  123  git status
+  124  git commit -m " Jenkins history file added"
+  125  git push origin master
+  126  git --version
+  127  update-git-alternatives -l
+  128  which git
+  129  cd /usr/share/
+  130  ls
+  131  systemctl start jenkins
+  132  git --version
+  133  systemctl status jenkins
+  134  git config --list
+  135  git --version
+  136  git config --global user.name "Riyaz1994"
+  137  git config --global user.email "riyaz.md94@gmail.com"
+  138  git config --list
+  139  cd /var/lib/jenkins
+  140  ls
+  141  cd workspace
+  142  ls
+  143  cd 02_jb_declarative_pipeline_job
+  144  ls
+  145  cd target
+  146  ls
+  147  cd generated-sources
+  148  ls
+  149  cd ..
+  150  cd maven-archiver
+  151  ls
+  152  vi pom.properties
+  153  nexus.view.exhaustForAgents=-Apache-Maven.*|Apache Ivy.*
+  154  cd
+  155  nexus.view.exhaustForAgents=-Apache-Maven.*|Apache Ivy.*
+  156  whereis gcc
+  157  cd /usr/bin/
+  158  find -name gcc
+  159  ls
+  160  grep gcc
+  161  cat gcc
+  162  cd /usr/lib
+  163  ls
+  164  cd gcc
+  165  ls
+  166  cd ..
+  167  ls -ltr gcc
+  168  chmod -R 777 gcc
+  169  ls -ltr gcc
+  170  cd /var/lib/jenkins/workspace/MyPipeline
+  171  ls
+  172  cd lab1_lab2
+  173  ls
+  174  cat mario.c
+  175  $gccHome --std=c99 -o mario.c
+  176  gcc cd /usr/bin
+  177  cd /usr/bin
+  178  ls
+  179  cd /usr/lib/gcc
+  180  ls
+  181  cd x86_64-linux-gnu/
+  182  ls
+  183  ls -a
+  184  cd 8
+  185  ls
+  186  ls -a
+  187  whereis c99
+  188  cd
+  189  which c99
+  190  whereis c99
+  191  whereis gcc
+  192  cd /var/lib/jenkins/workspace/MyPipeline
+  193  ls
+  194  cd lab1_lab2
+  195  ls
+  196  gcc -o mario.c
+  197  apt install gcc -y
+  198  gcc --version
+  199  cd /usr/bin | ls -l gcc
+  200  cd /usr/bin
+  201  ls
+  202  cat c99
+  203  whereis gcc
+  204  cat /usr/bin/gcc
+  205  cd /usr/bin/gcc
+  206  ls -l gcc
+  207  vi script.sh
+  208  chmod +x script.sh
+  209  ./script.sh
+  210  docker --version
+  211  whereis docker
+  212  sudo chmod 666 /var/run/docker.sock
+  213  cd /var/run/
+  214  ls
+  215  ls -l docker.sock
+  216  history
+  217  history > commands_pipelines.txt
